@@ -1,12 +1,12 @@
 <?php
 $result = false;
-
-if (isset($_POST['select'])) {
-  $janken = array(
+$janken = array(
     'グー',
     'チョキ',
     'パー'
-  );
+);
+
+if (isset($_POST['select'])) {
   $player = ($_POST['select']);
   $com = $janken[array_rand($janken)];
 
@@ -51,10 +51,11 @@ if (isset($_POST['select'])) {
 ?>
 <!DOCTYPE html>
 <html lang="ja">
+<link rel="stylesheet" href="style.css">
 
 <head>
   <meta charset="UTF-8">
-  <title>PHP課題①-4</title>
+  <title>じゃんけん</title>
 </head>
 
 <body>
